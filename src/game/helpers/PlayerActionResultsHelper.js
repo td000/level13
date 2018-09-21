@@ -637,6 +637,7 @@ define([
         // level ordinal: current location level ordinal
 		getRewardItems: function (itemProbability, ingredientProbability, itemTypeLimits, efficiency, currentItems, levelOrdinal) {
 			var result = [];
+            var campOrdinal = this.gameState.getCampOrdinal(level);
 
 			// Neccessity items (map, bag) that the player should find quickly if missing
 			var necessityItem = this.getNecessityItem(itemProbability, itemTypeLimits, efficiency, currentItems, campOrdinal);
