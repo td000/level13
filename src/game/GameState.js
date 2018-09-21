@@ -1,4 +1,6 @@
 define(['ash', 'game/worldcreator/WorldCreatorHelper'], function (Ash, WorldCreatorHelper) {
+//    var TimeModifier = 1000;
+    var TimeModifier = 333;
     var GameState = Ash.Class.extend({
         
         constructor: function () {
@@ -69,7 +71,7 @@ define(['ash', 'game/worldcreator/WorldCreatorHelper'], function (Ash, WorldCrea
         passTime: function (seconds) {
             var cooldownkeys = Object.keys(this.actionCooldownEndTimestamps);                
             for (var i = 0; i < cooldownkeys.length; i++) {
-                this.actionCooldownEndTimestamps[cooldownkeys[i]] = this.actionCooldownEndTimestamps[cooldownkeys[i]] - seconds * 1000;
+                this.actionCooldownEndTimestamps[cooldownkeys[i]] = this.actionCooldownEndTimestamps[cooldownkeys[i]] - seconds * TimeModifier;
             }
         },
         
@@ -112,7 +114,7 @@ define(['ash', 'game/worldcreator/WorldCreatorHelper'], function (Ash, WorldCrea
         setActionCooldown: function (action, key, cooldown) {
             var actionKey = action;
             if (key.length > 0) actionKey += "-" + key;
-            this.actionCooldownEndTimestamps[actionKey] = new Date().getTime() + cooldown * 1000;
+            this.actionCooldownEndTimestamps[actionKey] = new Date().getTime() + cooldown * TimeModifier;
         },
         
         getActionCooldown: function (action, key) {
@@ -130,7 +132,7 @@ define(['ash', 'game/worldcreator/WorldCreatorHelper'], function (Ash, WorldCrea
         setActionDuration: function (action, key, duration) {
             var actionKey = action;
             if (key.length > 0) actionKey += "-" + key;
-            this.actionDurationEndTimestamps[actionKey] = new Date().getTime() + duration * 1000;
+            this.actionDurationEndTimestamps[actionKey] = new Date().getTime() + duration * TimeModifier;
         },
         
         getActionDuration: function (action, key) {
