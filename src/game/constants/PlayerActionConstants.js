@@ -2078,7 +2078,7 @@ function (Ash, GameConstants, CampConstants) {
                 send_caravan: 60 * 10,
                 use_in_inn: 60 * 30,
                 despair: 60,
-                nap: 120,
+                nap: 5,
             },
             
             durations: {
