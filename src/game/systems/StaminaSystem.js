@@ -60,14 +60,11 @@ define([
             var staminaPerS = 2 * staminaComponent.health / 100 / 60 * GameConstants.gameSpeedExploration;
 			
 			if (node.position.inCamp) {
-                var staminaPerSCamp = staminaPerS * 9;
-				staminaComponent.stamina += time * staminaPerSCamp;
-				staminaComponent.accSources = [{ source: "Being in camp", amount: staminaPerSCamp }];
-				staminaComponent.accumulation = staminaPerS;
-			} else {
-				staminaComponent.accSources = [];
-                staminaComponent.accumulation = 0;
-            }
+                staminaPerS *= 9;
+				staminaComponent.accSources = [{ source: "Being in camp", amount: staminaPerS }];
+			}
+            staminaComponent.stamina += time * staminaPerS;
+            staminaComponent.accumulation = staminaPerS;
 				
 			if (staminaComponent.stamina > healthVal * PlayerStatConstants.HEALTH_TO_STAMINA_FACTOR) {
 				staminaComponent.stamina = healthVal * PlayerStatConstants.HEALTH_TO_STAMINA_FACTOR;
