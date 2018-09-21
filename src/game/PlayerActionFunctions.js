@@ -640,7 +640,7 @@ define(['ash',
         nap: function () {
             this.uiFunctions.hideGame(false);
             var sys = this;
-            this.passTime(60, function () {                
+            this.passTime(5, function () {                
                 setTimeout(function () {
                     sys.playerStatsNodes.head.vision.value = Math.min(sys.playerStatsNodes.head.vision.value, PlayerStatConstants.VISION_BASE);
                     var logMsgSuccess = "Found a park bench to sleep on. Barely feel rested.";
