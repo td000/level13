@@ -13,7 +13,8 @@ define(['ash', 'game/vos/PlayerActionVO'], function (Ash, PlayerActionVO) {
         
         addAction: function (action, duration, param, isBusyAction) {
             if (!this.isBusy() && isBusyAction) this.busyStartTime = new Date().getTime();
-            var endTimeStamp = new Date().getTime() + duration * 1000;
+//            var endTimeStamp = new Date().getTime() + duration * 1000;
+            var endTimeStamp = new Date().getTime() + duration * 100;
             this.endTimeStampToActionDict[endTimeStamp] = new PlayerActionVO(action, param, isBusyAction);
             this.endTimeStampList.push(endTimeStamp);
             this.sortTimeStamps();
