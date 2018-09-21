@@ -254,7 +254,7 @@ define([
                         if (!sectorVO) continue;
                         
                         sectorVO.resourcesScavengable = WorldCreatorHelper.getSectorScavengableResources(seed, topLevel, bottomLevel, sectorVO);
-						if (level === 13 && x === WorldCreatorConstants.FIRST_CAMP_X && y === WorldCreatorConstants.FIRST_CAMP_Y)
+						if (sectorVO.level === 13 && x === WorldCreatorConstants.FIRST_CAMP_X && y === WorldCreatorConstants.FIRST_CAMP_Y)
 						{
 							sectorVO.resourcesScavengable.metal *= 2;
 						}
