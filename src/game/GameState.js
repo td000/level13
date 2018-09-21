@@ -1,6 +1,6 @@
 define(['ash', 'game/worldcreator/WorldCreatorHelper'], function (Ash, WorldCreatorHelper) {
 //    var TimeModifier = 1000;
-    var TimeModifier = 333;
+    var TimeModifier = 100;
     var GameState = Ash.Class.extend({
         
         constructor: function () {
