@@ -449,7 +449,8 @@ function (Ash, GlobalSignals, GameConstants, UIConstants, ItemConstants, PlayerA
         completeAction: function (action) {
             var button = $("button[action='" + action + "']");
             var baseId = this.playerActions.playerActionsHelper.getBaseActionID(action);
-            var cooldown = PlayerActionConstants.getCooldown(baseId);
+//            var cooldown = PlayerActionConstants.getCooldown(baseId);
+            var cooldown = PlayerActionConstants.getCooldown(baseId) / 3;
             if (cooldown > 0) {
                 var locationKey = this.getLocationKey($(button));
                 this.gameState.setActionCooldown(action, locationKey, cooldown);
