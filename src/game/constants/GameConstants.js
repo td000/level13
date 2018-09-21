@@ -1,8 +1,8 @@
 define( function () {
     var GameConstants = {
         
-        gameSpeedCamp: 1,
-        gameSpeedExploration: 1,
+        gameSpeedCamp: 3,
+        gameSpeedExploration: 3,
         isCheatsEnabled: false,
         isDebugOutputEnabled: false,
         
