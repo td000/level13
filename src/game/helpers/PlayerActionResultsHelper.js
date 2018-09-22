@@ -905,7 +905,7 @@ define([
 			}
 			
 			var unscoutedLocales = this.levelHelper.getLevelLocales(playerPos.level, false, false, localeVO).length + 1;
-			var blueprintPiecesToFind = this.getPendingBlueprintPiecesCount(campOrdinal, blueprintType);
+//			var blueprintPiecesToFind = this.getPendingBlueprintPiecesCount(campOrdinal, blueprintType);
 			var levelBlueprintProbability = blueprintPiecesToFind / unscoutedLocales;
 			if (GameConstants.isDebugOutputEnabled)
 				console.log(blueprintPiecesToFind + " / " + unscoutedLocales + " -> " + levelBlueprintProbability);
