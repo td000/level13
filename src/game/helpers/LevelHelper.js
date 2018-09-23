@@ -160,6 +160,9 @@ define([
             
             var makePathSectorVO = function (entity) {
                 if (!entity) return null;
+				if( !entity.get || typeof entity.get != "function" ) {
+					return null;
+				}
                 return {
                     position: entity.get(PositionComponent).getPosition(),
                     isVisited: entity.has(VisitedComponent),
