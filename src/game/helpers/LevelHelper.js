@@ -187,7 +187,7 @@ define([
                     return levelHelper.getSectorNeighboursMap(pathSectorVO.result, makePathSectorVO);
                 },
                 isBlocked: function (pathSectorVO, direction) {
-                    return makePathSectorVO(movementHelper.isBlocked(pathSectorVO.result, direction));
+                    return movementHelper.isBlocked(pathSectorVO.result, direction);
                 }
             };
             
