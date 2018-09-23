@@ -276,7 +276,7 @@ define([
                     var options = { requireCentral: true, excludingFeature: "camp", pathConstraints: pathConstraints };
                     var refinerySectors = WorldCreatorRandom.randomSectors(seed * l * 2 / 7 * l, this.world, levelVO, 1, 2, options);
                     for (var i = 0; i < refinerySectors.length; i++) {
-                        refinerySectors[i].resourcesScavengable = 5;
+                        refinerySectors[i].resourcesScavengable.fuel = 5;
                         refinerySectors[i].workshopResource = resourceNames.fuel;
                         refinerySectors[i].workshop = true;
                         for (var j = 0; j < pathConstraints.length; j++) {
