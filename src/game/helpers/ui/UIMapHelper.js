@@ -153,6 +153,8 @@ function (Ash,
                         sectorPos = new PositionVO(mapPosition.level, x, y);
                         this.drawSectorOnCanvas(ctx, sector, sectorStatus, sectorXpx, sectorYpx, sectorSize);
                         this.drawMovementLinesOnCanvas(ctx, mapPosition, sector, sectorPos, sectorXpx, sectorYpx, sectorSize, sectorPadding);
+                    }else{
+                        this.drawSectorOnCanvas(ctx, sector, sectorStatus, sectorXpx, sectorYpx, sectorSize);
                     }
                 }
             }
