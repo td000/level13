@@ -149,11 +149,11 @@ function (Ash,
                     sectorXpx = this.getSectorPixelPos(dimensions, centered, sectorSize, x, y).x;
                     sectorYpx = this.getSectorPixelPos(dimensions, centered, sectorSize, x, y).y;
                     
-                    if (this.showSectorOnMap(centered, sector, sectorStatus)) {
+//                    if (this.showSectorOnMap(centered, sector, sectorStatus)) {
                         sectorPos = new PositionVO(mapPosition.level, x, y);
                         this.drawSectorOnCanvas(ctx, sector, sectorStatus, sectorXpx, sectorYpx, sectorSize);
                         this.drawMovementLinesOnCanvas(ctx, mapPosition, sector, sectorPos, sectorXpx, sectorYpx, sectorSize, sectorPadding);
-                    }
+//                    }
                 }
             }
                         
@@ -330,7 +330,7 @@ function (Ash,
         },
         
         showSectorOnMap: function (centered, sector, sectorStatus) {
-             return true;
+//            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
 //            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
         },
         
