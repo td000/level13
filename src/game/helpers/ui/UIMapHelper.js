@@ -153,8 +153,6 @@ function (Ash,
                         sectorPos = new PositionVO(mapPosition.level, x, y);
                         this.drawSectorOnCanvas(ctx, sector, sectorStatus, sectorXpx, sectorYpx, sectorSize);
                         this.drawMovementLinesOnCanvas(ctx, mapPosition, sector, sectorPos, sectorXpx, sectorYpx, sectorSize, sectorPadding);
-                    }else{
-                        this.drawSectorOnCanvas(ctx, sector, sectorStatus, sectorXpx, sectorYpx, sectorSize);
                     }
                 }
             }
@@ -332,7 +330,8 @@ function (Ash,
         },
         
         showSectorOnMap: function (centered, sector, sectorStatus) {
-            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
+             return sector;
+//            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
         },
         
         getCanvasMinimumWidth: function (canvas) {
