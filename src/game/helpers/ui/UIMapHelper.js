@@ -330,8 +330,7 @@ function (Ash,
         },
         
         showSectorOnMap: function (centered, sector, sectorStatus) {
-//            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
-//            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
+            return this.isMapRevealed ? sector : sector  && sectorStatus !== SectorConstants.MAP_SECTOR_STATUS_UNVISITED_INVISIBLE;
         },
         
         getCanvasMinimumWidth: function (canvas) {
